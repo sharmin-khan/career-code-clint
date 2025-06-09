@@ -3,6 +3,16 @@ import Lottie from 'react-lottie';
 import registerLottie from '../../assets/Lotties/register.json'
 
 const Register = () => {
+
+  const handleRegister = (e)=>{
+     e.preventDefault();
+     const form = e.target;
+     const email = e.target.email.value;
+     const password = e.target.password.value;
+     console.log(email,password);
+
+  }
+
   return (
    <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
@@ -13,7 +23,7 @@ const Register = () => {
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
        <h1 className="text-5xl font-bold">Register now!</h1>
       <div className="card-body">
-        <form>
+        <form onSubmit={handleRegister}>
           <fieldset className="fieldset">
           <label className="label">Email</label>
           <input type="email" name='email' className="input" placeholder="Email" />
