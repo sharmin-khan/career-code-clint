@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import signInLottie from '../../assets/Lotties/signin.json'
 import Lottie from 'react-lottie';
+import SocialLogIn from '../Shared/SocialLogIn';
 
 const SignIn = () => {
 
@@ -31,7 +32,7 @@ const SignIn = () => {
   width={400}></Lottie>
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-       <h1 className="text-5xl font-bold">Sign In now!</h1>
+       <h1 className="text-5xl font-bold text-center mt-3">Sign In now!</h1>
       <div className="card-body">
         <form onSubmit={handleSignIn}>
           <fieldset className="fieldset">
@@ -43,6 +44,9 @@ const SignIn = () => {
           <button className="btn btn-neutral mt-4">Sign In</button>
         </fieldset>
         </form>
+        <div className='text-center'>
+          <SocialLogIn></SocialLogIn>
+        </div>
       </div>
     </div>
   </div>
